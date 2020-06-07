@@ -6,7 +6,7 @@
             body{
                 background-color: black;
             }
-            .sky {
+            .sky{
                 width:100%;
                 height:400px;
                 margin: 0px 0px 0px 0px;
@@ -98,9 +98,7 @@
                 animation-name:fade;
                 animation-duration: 4.5s;
                 animation-iteration-count: infinite;
-            }
-
-           
+            }           
             /* other stars left side */
             #star8{
                 position:absolute;
@@ -155,7 +153,7 @@
                 top:26%;
                 left:20%;
                 animation-name:fade;
-                animation-duration: 26s;
+                animation-duration: 16s;
                 animation-iteration-count: infinite;
             }
             #star15{
@@ -359,7 +357,99 @@
                 animation-duration: 10s;
                 animation-iteration-count: infinite;
             }
-            
+            .boat{
+                width: 118px;
+                height: 80px;
+                position: absolute;
+                bottom: 0%;
+                animation-name:move;
+                animation-duration: 20s;
+                animation-iteration-count: infinite;
+            }
+            @keyframes move {
+                0%{
+                    position: absolute;
+                    bottom: 0px;
+                    left:0%;
+                }
+                99%{
+                    position: absolute;
+                    bottom:0px;
+                    left:93%;
+                    opacity: 1;
+                }
+                100%{
+                    position: absolute;
+                    bottom:0px;
+                    left:93%;
+                    opacity: 0.0;
+                }
+            }
+            .lantern{
+                width: 1px;
+                height: 1px;
+                background: yellow;
+                box-shadow: 0px 0px 3px 3px orange;
+                position:absolute;
+                bottom:12px;
+                right:35px;
+            }
+            .sail{
+                width: 0px;
+                height: 0px;
+                border-top: 60px solid transparent;
+                border-left: 60px solid black;
+                border-bottom: 60px solid transparent;
+                position: absolute;
+                left: 10px;
+                animation-name:bobbing;
+                animation-duration: 6s;
+                animation-iteration-count: infinite;
+            }
+            .hull{
+                width: 60px;
+                height: 15px;
+                background: black;
+                position: absolute;
+                bottom: 0%;
+                animation-name:bobbing;
+                animation-duration: 6s;
+                animation-iteration-count: infinite;                
+            }
+
+            @keyframes bobbing {
+                20%{
+                    transform: rotate(1deg);
+                }
+                40%{
+                    transform: rotate(6deg);
+                }
+                60%{
+                    transform: rotate(1deg);
+                }
+                80%{
+                    transform: rotate(6deg);
+                }
+            }
+            .hull::before{
+                content: "";
+                width: 20px;
+                height: 15px;
+                position: absolute;
+                bottom: 0%;
+                background: black;
+                transform: skewX(40deg);
+            }
+            .hull::after{
+                content: "";
+                width: 40px;
+                height: 15px;
+                position: absolute;
+                bottom: 0%;
+                left:100%;
+                background: black;
+                transform: skewX(-60deg);
+            }
     
         </style>
     </head>
@@ -407,7 +497,12 @@
             <div class="star" id="star37"></div>
             <div class="star" id="star38"></div>
             <div class="star" id="star39"></div>
-         
+            <!--boat-->
+            <div class="boat">
+                <div class="sail"></div>
+                <div class="lantern"></div>
+                <div class="hull"></div>
+            </div>
         </div>
     </body>
 </html>
