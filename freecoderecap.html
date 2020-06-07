@@ -11,14 +11,14 @@
             ul {
                 background-color: yellowgreen;
             }
-            .input-length{
+            .input-distances{
                 background-color: violet;
-                padding: 0px 100px 0px 0px;
+                padding: 20px 10px 20px 10px;
             }
             .radio-input{
                 background-color: aquamarine;
                 color: red;
-                margin: 10px 0px 10px 0px;
+                padding: 20px 10px 20px 10px;
             }
         
         </style>
@@ -57,20 +57,30 @@
         <div>
             <p>This is a form</p>
             <form>
-                <input class="input-lenght" type="text" placeholder="you must write something here" required>
-                <button type="reset">this is a button that delete your text</button>
-            <div class="radio-input">
-                <label for="pear">
-                    <input type="radio" id="pear" name="pear-apple-mango">pear
-                </label>
-                <label for="apple">
-                    <input type="radio" id="apple" name="pear-apple-mango">apple
-                </label>
-                <label for="mango">
-                    <input type="radio" id="mango" name="pear-apple-mango">mango
-                </label>
-            </div>
-    
+                <input class="input-distances" type="text" placeholder="you must write something here" required>
+                <div class="radio-input">
+                    <label for="pear">
+                        <input type="radio" id="pear" value="pear" name="pear-apple-mango">pear
+                    </label>
+                    <label for="apple">
+                        <input type="radio" id="apple" value="apple" name="pear-apple-mango" checked >apple
+                    </label>
+                    <label for="mango">
+                        <input type="radio" id="mango" value="mango" name="pear-apple-mango">mango
+                    </label>                
+                </div>
+                <div class="input-distances">
+                    <label for="car">
+                        <input type="checkbox" id="car" value="car" name="car-moto-boat">car
+                    </label>
+                    <label for="moto">
+                        <input type="checkbox" id="moto" value="moto" name="car-moto-boat" checked >moto
+                    </label>
+                    <label for="boat">
+                        <input type="checkbox" id="boat" value="boat" name="car-moto-boat">boat
+                    </label>                
+                </div>
+                <button type="reset">this is a button that reset your form</button>    
             </form>
         </div>
         <p>this is an image</p>
