@@ -6,7 +6,7 @@
             body{
                 background-color: black;
             }
-            .sky{
+            .scene{
                 width:100%;
                 height:400px;
                 margin: 0px 0px 0px 0px;
@@ -363,7 +363,7 @@
                 position: absolute;
                 bottom: 0%;
                 animation-name:move;
-                animation-duration: 20s;
+                animation-duration: 60s;
                 animation-iteration-count: infinite;
             }
             @keyframes move {
@@ -450,11 +450,88 @@
                 background: black;
                 transform: skewX(-60deg);
             }
+            .lighthouse{
+                width: 10%;
+                height: 60%;
+                background: transparent;
+                position: absolute;
+                bottom: 0%;
+                right:0%;
+            }
+            .tower{
+                width: 30%;
+                height: 80%;
+                background: black;
+                position:absolute;
+                bottom: 0%;
+                right: 10%;
+            }
+            .window{
+                width: 5%;
+                height: 5%;
+                background: orange;
+                position: absolute;
+                bottom: 60%;
+                right: 50%;
+            }
+            .cupola{
+                width: 40%;
+                height: 20%;
+                border-radius: 10%;
+                background: black;
+                position:absolute;
+                top: 0%;
+                right: 5%;
+            }
+            .light{
+                width: 10%;
+                height: 40%;
+                background: yellow;
+                box-shadow: palegoldenrod 0px 0px 5px 5px;
+                position: absolute;
+                top: 1%;
+                left: 20%;
+                animation-name:light;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+            }
+            @keyframes light {
+                0%{
+                    width: 0%;
+                }
+                40%{
+                    widht:10%;
+                    left:30%;
+                }
+                60%{
+                    width: 20%;
+                    left:50%;
+                    right:50%;
+                }
+                80%{
+                    width: 10%;
+                    left:70%;
+                    right:30%
+                }
+                100%{
+                    width: 0%;
+                    left: 80%;
+                    right: 0%;
+                }
+                
+            }
+            .pier{
+                width: 100%;
+                height: 2%;
+                background:black;
+                position: absolute;
+                bottom: 0%;
+            }
     
         </style>
     </head>
     <body>
-        <div class="sky">
+        <div class="scene">
             <!--ursa minor-->
             <div class="star" id="star1"></div>
             <div class="star" id="star2"></div>
@@ -502,6 +579,15 @@
                 <div class="sail"></div>
                 <div class="lantern"></div>
                 <div class="hull"></div>
+            </div>
+            <div class="lighthouse">
+                <div class="tower">
+                    <div class="window"></div>
+                </div>
+                <div class="cupola">
+                    <div class="light"></div>
+                </div>
+                <div class="pier"></div>
             </div>
         </div>
     </body>
